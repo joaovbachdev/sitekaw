@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionar ao Clicar</title>
+    <style>
+        @font-face {
+          font-family: 'gotham-lite'; /* Nome personalizado que você escolher */
+          src: url('fontes/Gotham-Light.otf') format('truetype'); /* Caminho para o arquivo da fonte */
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow-y: overlay;
+}
+        .section{
+            position: relative;
+            width: 100%;
+            height: 77%;
+        }
+        .section img{
+            width: 100%;
+            height: 100%;
+        }
+        .area2{
+           position: relative;
+            width: 100%;
+            height: 100%;
+            background: red;
+            background: #292929;
+            padding-bottom: 6%;
+        }
+        .area2 img{
+            margin-top: 6%;
+            margin-left: 8%;
+        }
+                .area3{
+           position: relative;
+            width: 100%;
+            height: 100%;
+            background: #292929;
+            padding-bottom: 6%;
+        }
+        .area3 img{
+            width: 100%;
+        }
+
+
+.photo-container {
+    width: 40%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+}
+
+.photo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    transition: transform 0.5s ease-out;
+}
+
+.photo-container button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.esquerda h2{
+    margin-right: 20%;
+    color: white;
+    font-family: 'gotham-lite', sans-serif; 
+     font-weight: normal;
+}
+.direita h2{
+    margin-left: 30%;
+    color: white;
+    font-family: 'gotham-lite', sans-serif;
+    font-weight: normal;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.foto-video{
+    z-index: 50;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.foto-video .direita{
+
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+.foto-video .direita video{
+    width: 50%;
+    height: 60%;
+    margin-left: 30%;
+}
+.foto-video .esquerda{
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+.area4{ 
+    width: 100%;
+    height: 180%%;
+    background-color: #292929;
+}
+.area4 img{
+    width: 100%;
+}
+    </style>
+
+</head>
+<body>
+    <div class="section">
+            <img src="imagens/area1/sobre-mim.png" />
+    </div>
+        <div class="area2">
+        <img src="imagens/area1/cor.png" />
+    </div>
+    <div class="area3">
+        <img src="imagens/area1/personal-organizer.png" />
+        <div class="foto-video">
+            <div class="direita">
+            <video width="600" controls>
+                <source src="imagens/area1/processo.mp4" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+            <h2>Processos</h2>
+            </div>
+                        <div class="esquerda">
+                            <div class="photo-container">
+                <img id="photo" src="imagens/area1/roupa1.jpg" alt="Foto" />
+                <button id="nextBtn">Próxima Foto</button>
+                </div>
+                <h2>Resultados</h2>
+            </div>
+         </div>
+    </div>
+    <div class="area4">
+        <img src="imagens/area1/logoGatos.png"> 
+
+    </div>
+    <script>
+        const images = ["roupa1.jpg", "roupa2.jpg", "roupa3.jpg"]; // Adicione mais URLs de imagens aqui
+            let currentIndex = 0;
+
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                const img = document.getElementById('photo');
+                
+                // Primeira animação: sair para a direita
+                img.style.transform = 'translateX(100%)';
+                
+                // Depois de 0.5s, muda para a próxima imagem e coloca a nova imagem fora da tela à esquerda
+                setTimeout(function() {
+                    currentIndex = (currentIndex + 1) % images.length; // Vai para a próxima imagem
+                    img.src = 'imagens/area1/'+images[currentIndex];
+                    img.style.transition = 'none'; // Remove a transição para colocar a imagem imediatamente à esquerda
+                    img.style.transform = 'translateX(-100%)'; // Posiciona a nova imagem fora da esquerda
+
+                    // Reabilita a animação e faz a nova imagem entrar da esquerda
+                    setTimeout(function() {
+                        img.style.transition = 'transform 0.5s ease-out';
+                        img.style.transform = 'translateX(0)'; // Nova imagem entra da esquerda para o centro
+                    }, 20);
+                }, 500); // Tempo da animação de saída
+            });
+
+    </script>
+ 
+</body>
+</html>

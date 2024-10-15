@@ -1,0 +1,340 @@
+@font-face {
+  font-family: 'vogue-sans'; /* Nome personalizado que você escolher */
+  src: url('fontes/vogue-sans-regular.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+}
+@font-face {
+  font-family: 'gotham-lite'; /* Nome personalizado que você escolher */
+  src: url('fontes/Gotham-Light.otf') format('truetype'); /* Caminho para o arquivo da fonte */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: overlay;
+}
+
+.section {
+    position: relative; /* Mantém o contexto para a section */
+    width: 100%;
+    height: 100vh; /* Ocupa a tela toda */
+    display: flex;
+    flex-direction: column; /* Coloca o header no topo e conteúdo abaixo */
+}
+.section-half {
+    position: relative; /* Mantém o contexto para a section */
+    width: 100%;
+    height: 80vh; /* Ocupa a tela toda */
+    display: flex;
+    flex-direction: column; /* Coloca o header no topo e conteúdo abaixo */
+    background-color: #292929;
+}
+
+.section-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher a div */
+    position: absolute; /* Fica como fundo, sem influenciar o fluxo dos elementos */
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.header {
+    position: relative; /* Relativo ao fluxo normal da section */
+    width: 80%;
+    height: 5%;
+    padding: 20px;
+    margin-left: 10%;
+    color: white;
+    z-index: 1; /* Fica acima da imagem */
+}
+.logo{
+    position: relative;
+    width: 18%;
+    height: 100%;
+    margin-top: 2%;
+}
+.content{
+    margin-left: 10%;
+    width: 32%;
+    margin-top: 12%;
+    z-index: 1;
+}
+.content h1{
+    color: #a394ab;
+    margin:0;
+    font-size: 4.0rem;
+    font-family: 'vogue-sans', sans-serif;
+    font-weight: normal;
+
+
+}
+.content p{
+    color: white;
+    font-family: 'gotham-lite', sans-serif; 
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 0;
+    line-height: 1.2;
+    margin-left:0;
+}
+.footer{
+    width: 80%;
+    height: 10%;
+    margin-top: 15%;
+    align-content: center;
+    margin-left: 10%;
+    z-index: 1;
+}
+.btn{
+    background-color: transparent;
+    border:2px solid #a394ab;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 70px 15px 70px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+           font-family: 'gotham-lite', sans-serif;
+           font-weight: bold;
+           letter-spacing: 1px;
+           font-size: 15px;
+
+}
+.btn:hover {
+    background-color: grey; /* Nova cor de fundo ao passar o mouse */
+}
+.btn-header{
+    float: right;
+}
+.logo-area2{
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+}
+.area2-content{
+    position: relative;
+    width: 50%;
+    height: 75%;
+    z-index: 1;
+    float: right;
+    margin-left: auto;
+    top: 15%;
+}
+.area2-titulo{
+    font-family: 'vogue-sans', sans-serif; 
+    color: white;
+    position: absolute;
+    top: 10%;
+    font-size: 46px;
+}
+.area2-p{
+    position: absolute;
+    top:25%;
+    width: 80%;
+    font-size: 23px;
+    color: white;
+    margin-left: 0;
+    font-weight: normal;
+       font-family: 'gotham-lite', sans-serif;
+       z-index: 50;
+       line-height: 1.2;
+}
+.area2-content button{
+    position: absolute;
+    top: 75%;
+    z-index: 2;
+}
+.footer .btn{
+    margin-bottom: 30%;
+}
+.area3-header{
+    padding-top: 4%;
+    padding-left: 4%;
+}
+.area3-header h1{
+    color: white;
+    font-family: 'vogue-sans', sans-serif; 
+}
+
+
+        .minha-div {
+            width: 100%;
+            height: 70%;
+            position: relative; /* Adicione esta linha para usar a posição relativa */
+            overflow: hidden;
+        }
+        .minha-div .quadrado h3{
+              font-family: 'gotham-lite', sans-serif; 
+              color: white;
+              font-size: 25px;
+        }
+        .quadrado {
+            width: 700px; /* Tamanho do quadrado */
+            height: 80%; /* Tamanho do quadrado */
+            margin: 10px;
+            margin-bottom: 10%;
+            position: absolute; /* Permite a posição absoluta dentro da div pai */
+             transition: left 0.5s ease;
+                         background-size: cover; /* Preenche toda a div com a imagem */
+            background-position: center; /* Centraliza a imagem na div */
+            background-repeat: no-repeat; /* Não repete a imagem */
+            border-radius: 20px;
+            cursor: pointer;
+        
+        }
+
+
+        .direita-esquerda{
+            display: flex;
+            width: 100%;
+            height: 5%;
+            align-content: center;
+            justify-content: center;
+            color: white;
+            gap: 10px;
+            margin-top: 5%;
+        }
+        .direita-esquerda button{
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 15px;
+            padding: 0px 30px 0px 30px;
+            cursor: pointer;
+            color: white;
+        }
+        .direita-esquerda button:hover{
+            background-color: #efeff5;
+        }
+
+
+    .behance{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 12%;
+
+    }
+    .behance-left{
+        display: flex;
+        height: 100%;
+        width: 50%;
+        padding-top: 5%;
+        flex-direction: column;
+
+    }
+    .behance h1{
+        position: relative;
+        font-size: 105px;
+        font-family: 'vogue-sans', sans-serif; 
+        color: #a394ab;
+        font-weight: normal;
+        
+
+    }
+    .behance h3{
+        position: relative;
+        font-size: 50px;
+        font-family: 'vogue-sans', sans-serif; 
+        color: #a394ab;
+        font-weight: normal;
+
+    }
+        .behance p{
+            width: 80%;
+                font-family: 'gotham-lite', sans-serif; 
+                color: white;
+            width: 65%;
+            font-size: 22px;
+            line-height: 1.2;
+    }
+    .behance-left h1,h3{
+        margin:0;    
+    }
+    .behance-left h1,h3, p{
+        margin-left: 10%;
+        display: block;
+
+    }
+    .behance-left button{
+        margin-left: 10%;
+        width: 30%;
+        margin-top: 5%;
+    }
+    .behance-right{
+        margin-right: 10%;
+    }
+
+
+/*
+
+    .area5{
+        background-color: #a394ab;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+.area5-left,
+.area5-center,
+.area5-right {
+    width: 33.33%;   
+    height: 100%;     
+}
+
+.area5-left {
+    align-content: center;
+    justify-content: center;
+}
+
+.area5-center {
+    align-content: center;
+}
+
+.area5-right {
+    background-color: yellow;
+}
+
+.area5-left-form{
+    width: 70%;
+    height: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.area5-left-form input{
+    background-color: transparent; 
+    border: none;                   
+    border-bottom: 2px solid #292929;
+    outline: none;                  
+    padding: 5px;                   
+    font-size: 16px;               
+    color: black;                   
+    margin-bottom: 50px;
+}
+
+.area5-left-form input::placeholder {
+    color: #292929;                    
+}
+.area5-btn{
+    text-align: center;  
+    padding: 10px 20px;  
+    display: inline-block; 
+    width: 25%; 
+    height: 40px; 
+    background-color: transparent;
+    color: #292929; 
+    border: 2px solid #292929; 
+    cursor: pointer; 
+    font-size: 16px; 
+    border-radius: 10px;
+    margin-left: 75%;
+    margin-top: -6%;
+}
+.area5-left-form h3{
+    margin-left: 0;
+    margin-top: 30%;
+}
+*/
