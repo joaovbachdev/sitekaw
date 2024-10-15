@@ -55,32 +55,32 @@ function direita(){
 
 document.getElementById('sobreMimBtn').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/sobremim'; // Redireciona para a URL desejada
+    window.location.href = 'sobremim'; // Redireciona para a URL desejada
 });
 document.getElementById('first').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/first'; // Redireciona para a URL desejada
+    window.location.href = 'first'; // Redireciona para a URL desejada
 });
 
 document.getElementById('confira').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/confira'; // Redireciona para a URL desejada
+    window.location.href = 'confira'; // Redireciona para a URL desejada
 });
 
 document.getElementById('ident-visual').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/ident-visual'; // Redireciona para a URL desejada
+    window.location.href = 'ident-visual'; // Redireciona para a URL desejada
 });
 
 document.getElementById('midias-sociais').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/Midias-sociais'; // Redireciona para a URL desejada
+    window.location.href = 'Midias-sociais'; // Redireciona para a URL desejada
 });
 document.getElementById('midias-sociais').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/Midias-sociais'; // Redireciona para a URL desejada
+    window.location.href = 'Midias-sociais'; // Redireciona para a URL desejada
 });
 document.getElementById('ilustracao').addEventListener('click', function() {
     console.log("dale")
-    window.location.href = 'sitekaw/ilustracao'; // Redireciona para a URL desejada
+    window.location.href = 'ilustracao'; // Redireciona para a URL desejada
 });
