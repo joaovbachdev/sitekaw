@@ -74,7 +74,7 @@ html, body {
     color: white;
     font-family: 'gotham-lite', sans-serif; 
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 0;
     line-height: 1.2;
     margin-left:0;
@@ -98,7 +98,7 @@ html, body {
            font-family: 'gotham-lite', sans-serif;
            font-weight: bold;
            letter-spacing: 1px;
-           font-size: 15px;
+           font-size: 1.2rem;
 
 }
 .btn:hover {
@@ -127,25 +127,28 @@ html, body {
 .area2-titulo{
     font-family: 'vogue-sans', sans-serif; 
     color: white;
-    position: absolute;
+    position: relative;
     top: 10%;
-    font-size: 46px;
+    font-size: 4.0rem;
+    width: 100%;
+    height: 10%;
 }
 .area2-p{
-    position: absolute;
+    position: relative;
     top:25%;
     width: 80%;
-    font-size: 23px;
+    font-size: 1.2rem;
     color: white;
     margin-left: 0;
     font-weight: normal;
        font-family: 'gotham-lite', sans-serif;
        z-index: 50;
        line-height: 1.2;
+
 }
 .area2-content button{
-    position: absolute;
-    top: 75%;
+    position: relative;
+    top: 30%;
     z-index: 2;
 }
 .footer .btn{
@@ -163,32 +166,41 @@ html, body {
 
         .minha-div {
             width: 100%;
-            height: 70%;
+            height: 100%;
             position: relative; /* Adicione esta linha para usar a posição relativa */
-            overflow: hidden;
+
         }
-        .minha-div .quadrado h3{
-              font-family: 'gotham-lite', sans-serif; 
-              color: white;
-              font-size: 25px;
+        .minha-div .quadrado h3 {
+            font-family: 'gotham-lite', sans-serif;
+            color: white;
+            font-size: 25px;
+            position: relative;
+            top:105%;
+            margin-left: 5%
+
         }
         .quadrado {
-            width: 700px; /* Tamanho do quadrado */
-            height: 80%; /* Tamanho do quadrado */
-            margin: 10px;
-            margin-bottom: 10%;
+            display: flex;
+            width: 40%; /* Tamanho do quadrado */
+            height: 80%;
+             aspect-ratio: 16 / 9; /* Tamanho do quadrado */
+            top: -5%;
             position: absolute; /* Permite a posição absoluta dentro da div pai */
              transition: left 0.5s ease;
                          background-size: cover; /* Preenche toda a div com a imagem */
             background-position: center; /* Centraliza a imagem na div */
             background-repeat: no-repeat; /* Não repete a imagem */
             border-radius: 20px;
+            align-content: center;
+            justify-content: center;
             cursor: pointer;
+            background-size: contain;
         
         }
 
 
         .direita-esquerda{
+            position: relative;
             display: flex;
             width: 100%;
             height: 5%;
@@ -196,7 +208,9 @@ html, body {
             justify-content: center;
             color: white;
             gap: 10px;
-            margin-top: 5%;
+            z-index:1000;
+            top: 5%
+
         }
         .direita-esquerda button{
             background-color: transparent;
@@ -216,6 +230,7 @@ html, body {
         flex-direction: column;
         flex-wrap: wrap;
         padding-top: 12%;
+        padding-bottom: 12%;
 
     }
     .behance-left{
@@ -265,7 +280,12 @@ html, body {
         margin-top: 5%;
     }
     .behance-right{
+        position: relative;
         margin-right: 10%;
+    }
+    .behance-right img{
+                width: 100%;
+        height: 100%;
     }
 
 

@@ -69,14 +69,18 @@
 
 .photo-container button {
     position: absolute;
-    bottom: 10px;
     right: 10px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     color: white;
     border: none;
     cursor: pointer;
+    width: 10%;
+    height:15%;
 }
+.photo-container button i {
+    font-size: 3.0rem; /* ou outro valor que desejar */
+    }
 
 .esquerda h2{
     margin-right: 20%;
@@ -137,6 +141,7 @@ button:hover {
     width: 100%;
 }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body>
@@ -150,7 +155,7 @@ button:hover {
         <img src="imagens/area1/personal-organizer.png" />
         <div class="foto-video">
             <div class="direita">
-            <video width="600" controls>
+            <video width="600" muted controls>
                 <source src="imagens/area1/processo.mp4" type="video/mp4">
                 Seu navegador não suporta a tag de vídeo.
             </video>
@@ -158,8 +163,8 @@ button:hover {
             </div>
                         <div class="esquerda">
                             <div class="photo-container">
-                <img id="photo" src="imagens/area1/roupa1.jpg" alt="Foto" />
-                <button id="nextBtn">Próxima Foto</button>
+                <img id="photo" src="imagens/area1/roupa2.jpg" alt="Foto" />
+                <button id="nextBtn"><i class="fa-solid fa-chevron-up fa-rotate-90"></i></button>
                 </div>
                 <h2>Resultados</h2>
             </div>
@@ -170,7 +175,7 @@ button:hover {
 
     </div>
     <script>
-        const images = ["roupa1.jpg", "roupa2.jpg", "roupa3.jpg"]; // Adicione mais URLs de imagens aqui
+        const images = ["roupa2.jpg", "roupa1.jpg", "roupa3.jpg","roupa4.jpg","roupa5.jpg"]; // Adicione mais URLs de imagens aqui
             let currentIndex = 0;
 
             document.getElementById('nextBtn').addEventListener('click', function() {
